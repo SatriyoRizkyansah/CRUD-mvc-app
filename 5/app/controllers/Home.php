@@ -8,3 +8,5 @@ class Home extends Controller{
         $this->view('templates/footer');
     } 
 }
+
+// test
