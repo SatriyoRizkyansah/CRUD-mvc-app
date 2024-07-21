@@ -6,7 +6,6 @@
     </div>
   </div>
 
-
     <div class="row">
         <div class="col-lg-6">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
@@ -17,10 +16,13 @@
                 
             <ul class="list-group">
                 <?php foreach($data['mhs'] as $mhs) : ?>
-                    <li class="list-group-item d-flex justify-content-between align-items-start" aria-disabled="true">
-                        <?= $mhs['nama']?>
-                        <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs['id']?>" class="badge text-bg-primary ">Detail</a>
+                    <li class="list-group-item">
+                      <?= $mhs['nama']?>
+                      <a href="<?= BASEURL;?>/mahasiswa/hapus/<?= $mhs['id']?>" class="badge text-bg-danger float-end ms-2" onclick="return confirm('Yakin?')">Delete</a>
+                      <a href="<?= BASEURL;?>/mahasiswa/detail/<?= $mhs['id']?>" class="badge text-bg-primary float-end ms-1">Detail</a>
+
                     </li>
+                    
                 <?php endforeach;?>
             </ul>   
 
